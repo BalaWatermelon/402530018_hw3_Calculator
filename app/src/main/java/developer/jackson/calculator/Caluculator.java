@@ -41,9 +41,10 @@ public class Caluculator {
             new_num = false;
         }else{
             if(temp == "."){
-                // if . exists in number
+                if(origin.indexOf(".")<0){
+                    current = origin + temp;
+                }
             }
-            current = origin + temp;
         }
         display.setText(current);
     }
